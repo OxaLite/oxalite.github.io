@@ -1,7 +1,9 @@
 head {
     text-align: left;
 }
-
+html::-webkit-scrollbar {
+    width: 0px;
+}
 body {
     background-image: url(https://i.pinimg.com/originals/f3/e9/c7/f3e9c7c2f747cb98d9784ef4d38a6c3f.jpg);
     background-size: cover;
@@ -26,7 +28,7 @@ h1 {
 nav {
     background-color: rgba(0,0,0,0.4);
     height: 80px;
-    width: 800px;
+    width: 600px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -49,12 +51,12 @@ nav ul li a{
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 0px 16px 0px 16px;
+    padding: 0px 8px 0px 8px;
     text-decoration: none;
 }
 a.tbl-grey{
     background: grey;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-top: 20px;
     padding: 15px 20px 15px 20px;
     color: #FFFF;
@@ -65,9 +67,12 @@ a.tbl-grey:hover {
     background: black;
 }
 .wrapper {
-    width: 800px;
+    width: 600px;
     margin: auto;
     position: relative;
+}
+.wrapper li a:hover{
+    color: #b9b9b9;
 }
 .menu {
     float:right;
@@ -84,9 +89,6 @@ table {
     align-items: center;
 }
 
-a:hover,:active {
-    color: white;
-}
 input[type=text] {
     width: 50%;
     padding: 12px 20px;
@@ -105,12 +107,12 @@ input[type=text]:focus {
     background-color: rgba(0,0,0,0.4);
     height: 400px;
     width: 400px;
-    margin: auto;
+    margin:auto;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 30px;
     text-align: center;
-    border: 2px;
+    border: 1px;
     border-radius: 20px;
 }
 
@@ -126,6 +128,7 @@ input[type=text]:focus {
     border: 2px;
     border-radius: 20px;
 }
+
 .tabel {
     background-color: rgba(0,0,0,0.4);
     height: 1000px;
@@ -147,11 +150,18 @@ input[type=text]:focus {
     text-align: center;
     color: white;
     font-family: Helvetica;
+    font-size: 35px;
+}
+.link {
+    color: aqua;
+}
+.link a:hover, :active{
+    color: white;
 }
 footer {
     background-color: rgba(0,0,0,0.4);
     height: 160px;
-    width: 800px;
+    width: 600px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -165,6 +175,7 @@ footer ul li {
     list-style-type: none;
 }
 footer ul li a{
+    font-size: 30px;
     color: white;
     font-weight: bold;
     text-align: center;
