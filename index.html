@@ -11,6 +11,20 @@
 </head>
 
 <body>
+  <nav>
+    <div class="wrapper">
+      <div class="namabesar">OxaLite</div>
+      <div class="menu">
+        <ul>
+          <li><h1><a href="#sekilas">Sekilas</a></h1></li>
+          <li><h1><a href="#social">Gabut</a></h1></li>
+          <li><h1><a href="#Connect" class="tbl-grey">Connect</a></h1></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="sekilas">
   <div class="main">
     <h1>Hello 👋</h1>
     <p>Nama saya adalah Erdizah Ghodi Al Haidar. </p>
@@ -18,25 +32,45 @@
     <p>Bersekolah di <a href="https://smantas.sch.id"; target="blank";>SMAN 1 Tambun Selatan</a> XI IPA 4. </p>
     <p>Hobi saya adalah membaca, bermain game, dan bermatematika. </p>
   </div>
-
-  <div class="social">
-    <h1>Social Links</h1>
-    <p style="text-align:center"><a href="https://instagram.com/erdizah"; target="blank";>Instagram</a></p>
-    <p style="text-align:center"><a href="https://github.com/oxalite"; target="blank";>Github</a></p>
-    <p style="text-align:center"><a href="https://tlx.toki.id/profiles/Erdizah%20Ghodi"; target="blank">TLX TOKI</a></p>
-    <a href="https://oxalite.github.io"; target="blank"><img src="frame.png"></a>
-  </div>
+  </section>
 
   <div class="ngobrol">
     <form>
       <label for="masukan"><h1>Ngobrol:</h1></label>
     <br>
-      <input type="text" id="masukan" name="masukan"> <br>
+      <input type="text" id="masukan"> <br>
+      <button onclick="myfunction"></button>
+      
+      <p id="demo"></p>
+
+      <script>
+      function myfunction() {
+        var x = document.getElementById("masukan").value;
+        document.getElementById("demo").innerHTML = x;
+      }
+      </script>
     </form>
   </div>
 
   <div class="ngobrol">
-    <p style="text-align:center"><a href="https://oxalite.github.io/Tabel HTML.html"; target="blank"><h1>Gabut</h1></a></p>
+    <p style="text-align:center"><a href="Tabel HTML.html"; target="blank"><h1>Gabut</h1></a></p>
+    <p style="text-align:center"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"; target="blank">Don't Click</a></p> 
   </div>
+
+  <footer>
+    <section id="connect">
+    <div class="wrapper">
+      <img src="frame.png" width="160" height="160">
+      <div class="menu">
+        <ul>
+          <li><h1><a href="https://instagram.com/erdizah"; target="blank";>Instagram</a></h1></li>
+          <li><h1><a href="https://tlx.toki.id/profiles/Erdizah%20Ghodi" target="blank">Discord</a></h1></li>
+          <li><h1><a href="https://github.com/oxalite"; target="blank";>Github</a></h1></li>
+          <li><h1><a href="https://tlx.toki.id/profiles/Erdizah%20Ghodi" target="blank">TLX</a></h1></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </section>
 </body>
 </html>
