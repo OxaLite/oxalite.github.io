@@ -1,36 +1,93 @@
+head {
+    text-align: left;
+}
+
 body {
     background-image: url(https://i.pinimg.com/originals/f3/e9/c7/f3e9c7c2f747cb98d9784ef4d38a6c3f.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
    }
-
-   p {
-    font-family: Helvetica;
-    font-size: 20px;
-    text-align: center;
-    color:black;
-    }
-
-   h1,h2,h3,h4,h5,h6 {
+h1 {
     font-family: Helvetica;
     text-align: center;
     text-decoration: none;
     display: center;
     color: white;
-   }
-
-   table {
-    align-items: center;
-   }
-   a:link,:visited {
-    color:aqua
-   }
-
-   a:hover,:active {
+}
+.namabesar{
+    font-size: 60px;
+    font-weight: bold;
+    position: sticky;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
-   }
-   input[type=text] {
+}
+nav {
+    background-color: rgba(0,0,0,0.4);
+    height: 80px;
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: center;
+    border: 2px;
+    border-radius: 20px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+a.tbl-grey{
+    background: grey;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.tbl-grey:hover {
+    background: black;
+}
+.wrapper {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+.menu {
+    float:right;
+}
+
+p {
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    color:black;
+}
+
+table {
+    align-items: center;
+}
+
+a:hover,:active {
+    color: white;
+}
+input[type=text] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -40,47 +97,36 @@ body {
     transition: width 0.4s ease-in-out;
     border: none;
     border-bottom: 2px solid green;
-   }
-   input[type=text]:focus {
+}
+input[type=text]:focus {
     width: 90%;
-   }   
-   .main {
+}   
+.main {
     background-color: rgba(0,0,0,0.4);
     height: 400px;
     width: 400px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 30px;
     text-align: center;
     border: 2px;
     border-radius: 20px;
-   }
-   .social {
-    background-color: rgba(0,0,0,0.4);
-    height: 500px;
-    width: 400px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 30px;
-    text-align: center;
-    border: 2px;
-    border-radius: 20px;
-   }
-   .ngobrol {
+}
+
+.ngobrol {
     background-color: rgba(0,0,0,0.4);
     height: 200px;
     width: 400px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 30px;
     text-align: center;
     border: 2px;
     border-radius: 20px;
-   }
-   .tabel {
+}
+.tabel {
     background-color: rgba(0,0,0,0.4);
     height: 1000px;
     width: 1000px;
@@ -90,15 +136,46 @@ body {
     padding: 20px;
     border: 2px;
     border-radius: 20px;
-   }
-   .main p {
+}
+.main p {
     text-align: justify;
     color: white;
     font-family: Helvetica;
     font-size: 25px;
-   }
-   .main h1,h2,h3,h4,h5,h6 {
+}
+.main h1{
     text-align: center;
     color: white;
     font-family: Helvetica;
-   }
+}
+footer {
+    background-color: rgba(0,0,0,0.4);
+    height: 160px;
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: center;
+    border: 2px;
+    border-radius: 20px;
+}
+footer ul li {
+    float: left;
+    list-style-type: none;
+}
+footer ul li a{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 16px 8px 16px;
+    text-decoration: none;
+}
+.footerbesar {
+    font-size: 60px;
+    font-weight: bold;
+    position: sticky;
+    float: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
