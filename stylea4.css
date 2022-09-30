@@ -1,0 +1,107 @@
+body {
+    background-image: url(kelas.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: none;
+    padding: none;
+}
+.upper{
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+.logo{
+    font-size: 50px;
+    float: left;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:yellow;
+}
+.menu {
+    float: right;
+}
+h1 {
+    font-family: Helvetica;
+    text-decoration: none;
+    color: white;
+}
+nav{
+    width: 100%;
+    margin:initial;
+    display: flex;
+    line-height: 40px;
+    position: sticky;
+    position: -webkit-sticky;
+    background:rgba(0,0,0,0.4);
+    z-index: 1;
+    border-bottom: 0.5px solid black;
+    background-image: url(a4.jpg);
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+.dropdown .dropbtn { 
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    width: 120px;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.main {
+    background-color: rgba(0,0,0,0.4);
+    height: 400px;
+    width: 400px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: center;
+    border: 1px;
+    border-radius: 20px;
+}
+.main p {
+    text-align: justify;
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+}
