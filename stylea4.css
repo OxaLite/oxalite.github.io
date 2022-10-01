@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-image: url(background.jpeg);
     background-size: cover;
@@ -18,7 +21,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color:yellow;
 }
-.menu {
+.menunav {
     float: right;
 }
 h1 {
@@ -27,16 +30,15 @@ h1 {
     color: white;
 }
 nav{
+    background-attachment: fixed;
     width: 100%;
     margin:initial;
     display: flex;
     line-height: 40px;
     position: sticky;
     position: -webkit-sticky;
-    background:rgba(0,0,0,0.4);
     z-index: 1;
-    border-bottom: 0.5px solid black;
-    background-image: url(a4.jpg);
+    background-image: url(abu.jpeg);
 }
 nav ul{
     list-style-type: none;
@@ -53,13 +55,16 @@ nav ul li a{
     color: white;
     text-align: right;
     font-weight: bold;
-    padding: 0px 16px 0px 16px;
+    padding: 0px 32px 0px 16px;
     text-decoration: none;
+}
+nav ul li a h1{
+    padding-top: 16px;
 }
 nav ul li a:hover{
     text-decoration: underline;
 }
-nav ul li .dropdown .dropbtn { 
+nav ul li .dropdownbar .dropbtn { 
     padding-top: 10px;
     border: none;
     outline: none;
@@ -68,27 +73,28 @@ nav ul li .dropdown .dropbtn {
     font-family: inherit;
     margin: 0;
 }
-nav ul li .dropdown-content {
+nav ul li .dropdownbar-content {
     display: none;
     position: absolute;
     background-color: rgba(0,0,0,0.4);
     width: 120px;
 }
-nav ul li .dropdown-content a {
+nav ul li .dropdownbar-content a {
     float: none;
     color: black;
     text-decoration: none;
     display: block;
     text-align: left;
 }
-nav ul li .dropdown-content a:hover {
+nav ul li .dropdownbar-content a:hover {
     color: black;
 }
-nav ul li .dropdown:hover .dropdown-content {
+nav ul li .dropdownbar:hover .dropdownbar-content {
     display: block;
 }
 .main {
-    background-color: rgba(0,0,0,0.4);
+    background-image: url(kitasiapa36.png);
+    background-repeat: no-repeat;
     height: 400px;
     width: 400px;
     margin:auto;
@@ -105,15 +111,24 @@ nav ul li .dropdown:hover .dropdown-content {
     font-family: Helvetica;
     font-size: 25px;
 }
-.footer {
-    background-color: rgba(0,0,0,0.4);
-    height: 400px;
-    width: 400px;
-    margin:auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 30px;
-    text-align: center;
-    border: 1px;
-    border-radius: 20px;
+footer {
+    background-image: url(abu.jpg);
+    height: 160px;
+    width: 600px;
+    position: fixed;
 }
+.button {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(145, 92, 182);
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .glow-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+  }
