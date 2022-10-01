@@ -1,12 +1,12 @@
 body {
-    background-image: url(kelas.jpeg);
+    background-image: url(background.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: none;
     padding: none;
 }
-.upper{
+.wrap-upper{
     width: 1100px;
     margin: auto;
     position: relative;
@@ -59,7 +59,7 @@ nav ul li a{
 nav ul li a:hover{
     text-decoration: underline;
 }
-.dropdown .dropbtn { 
+nav ul li .dropdown .dropbtn { 
     padding-top: 10px;
     border: none;
     outline: none;
@@ -68,23 +68,23 @@ nav ul li a:hover{
     font-family: inherit;
     margin: 0;
 }
-.dropdown-content {
+nav ul li .dropdown-content {
     display: none;
     position: absolute;
     background-color: rgba(0,0,0,0.4);
     width: 120px;
 }
-.dropdown-content a {
+nav ul li .dropdown-content a {
     float: none;
     color: black;
     text-decoration: none;
     display: block;
     text-align: left;
 }
-.dropdown-content a:hover {
+nav ul li .dropdown-content a:hover {
     color: black;
 }
-.dropdown:hover .dropdown-content {
+nav ul li .dropdown:hover .dropdown-content {
     display: block;
 }
 .main {
@@ -104,4 +104,16 @@ nav ul li a:hover{
     color: white;
     font-family: Helvetica;
     font-size: 25px;
+}
+.footer {
+    background-color: rgba(0,0,0,0.4);
+    height: 400px;
+    width: 400px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: center;
+    border: 1px;
+    border-radius: 20px;
 }
