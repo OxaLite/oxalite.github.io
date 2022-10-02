@@ -177,10 +177,6 @@ img {
      box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
 }
 
-.navbar-form input {
-     border: none !important;
-}
-
 .badge {
      font-weight: 500;
 }
