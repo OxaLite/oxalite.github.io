@@ -1,11 +1,24 @@
 html {
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: yellow;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: orange;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: orange;
+}
 body {
-    background-image: url(background2.jpeg);
+    background-image: url(wallpaperv3.1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     margin: none;
     padding: 10px;
 }
@@ -15,7 +28,7 @@ body {
     float: left;
     padding-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: yellow;
+    color:yellow;
 }
 .menunav {
     float: right;
@@ -29,12 +42,11 @@ body {
 .navi{
     background-attachment: fixed;
     width: 100%;
-    margin: initial;
+    margin:initial;
     display: flex;
     line-height: 40px;
     position: sticky;
     position: -webkit-sticky;
-    top: 20px;
 }
 .navi ul{
     list-style-type: none;
@@ -113,6 +125,34 @@ body {
 .main h1 {
     padding-top: 50px;
     padding-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-family: Helvetica;
+    font-size: 30px;
+}
+.hadirin {
+    background-image: url(kitasiapa54.png);
+    background-repeat: no-repeat;
+    height: 540px;
+    width: 540px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: center;
+    border: 1px;
+    border-radius: 20px;
+}
+.hadirin p {
+    text-align: center;
+    color: white;
+    font-family: Helvetica;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.hadirin h1 {
+    padding-top: 20px;
+    padding-bottom: 30px;
     text-align: center;
     color: white;
     font-family: Helvetica;
