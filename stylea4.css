@@ -122,6 +122,12 @@ footer {
     background-image: url(abu.jpg);
     height: 160px;
     width: 600px;
+    text-align: left;
+    padding: 40px;
+    }
+.footer-bagian {
+    width: 20%;
+    margin: auto;
 }
 .button {
     text-decoration: none;
