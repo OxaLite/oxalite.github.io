@@ -118,11 +118,16 @@ body {
     font-size: 30px;
 }
 footer {
-    background-image: url(abu.jpg);
-    height: 160px;
-    width: 600px;
-    position: fixed;
-}
+   text-align: left;
+   padding: 50px;
+   background-image: url(abu.jpg);
+   position: center center;
+   display: flex;
+   flex-wrap: wrap;
+   }
+   .footer-section {
+    width: 20%;
+    margin: auto;
 .button {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
