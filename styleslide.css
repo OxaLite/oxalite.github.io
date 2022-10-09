@@ -523,7 +523,7 @@ ul.btn li:last-child {
 .images_box figure img {
      border-image: url(bingkai.png);
      border-radius: 20px;
-     width: 100%;
+     width: 90%;
 }
 
 .carousel-indicators li {
