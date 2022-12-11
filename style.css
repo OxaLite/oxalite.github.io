@@ -8,7 +8,7 @@ html::-webkit-scrollbar {
     width: 0px;
 }
 body {
-    background-image: url(https://i.pinimg.com/originals/f3/e9/c7/f3e9c7c2f747cb98d9784ef4d38a6c3f.jpg);
+    background-image: url(https://wallpaperaccess.com/full/137822.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -29,16 +29,11 @@ h1 {
     color: white;
 }
 nav {
-    background-color: rgba(0,0,0,0.4);
     height: 80px;
-    width: 600px;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 50px;
-    padding: 30px;
-    text-align: center;
-    border: 2px;
-    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 nav ul{
     list-style-type: none;
@@ -49,13 +44,59 @@ nav ul{
 
 nav ul li{
     float: left;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 nav ul li a{
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 0px 8px 0px 8px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
+}
+.hover_effect {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: block;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-touch-callout: none;  
+}
+
+.hover_effect:after {
+  content: "";
+  height: 5px;
+  left: 0;
+  bottom: -5px;
+  width: 1px;
+  position: absolute;
+  -webkit-transition: width 0.5s ease, background-color 0.5s ease;
+  -moz-transition: width 0.5s ease, background-color 0.5s ease;;
+  -ms-transition: width 0.5s ease, background-color 0.5s ease;;
+  -o-transition: width 0.5s ease, background-color 0.5s ease;;
+  transition: width 0.5s ease, background-color 0.5s ease;;
+  right: 0;
+  margin: 0 auto;
+}
+
+.hover_effect:hover {
+  color: yellow;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.hover_effect:hover:after, 
+.hover_effect:focus:after{
+  width: 80%;
+  background-color: yellow;
 }
 a.tbl-grey{
     background: grey;
@@ -70,7 +111,7 @@ a.tbl-grey:hover {
     background: black;
 }
 .wrapper {
-    width: 600px;
+    width: 80vw;
     margin: auto;
     position: relative;
 }
@@ -162,34 +203,60 @@ input[type=text]:focus {
     color: white;
 }
 footer {
-    background-color: rgba(0,0,0,0.4);
     height: 160px;
     width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    padding: 30px;
-    text-align: center;
-    border: 2px;
-    border-radius: 20px;
 }
+footer ul {
+    margin: 0;
+    padding-top: 30px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+  
 footer ul li {
-    float: left;
-    list-style-type: none;
+    list-style: none;
+    margin: 0 15px;
 }
-footer ul li a{
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
+  
+footer ul li a {
+    position: relative; 
+    display: block;
+    width: 60px;
+    height: 60px;
     text-align: center;
-    padding: 8px 16px 8px 16px;
-    text-decoration: none;
-}
-.footerbesar {
-    font-size: 60px;
-    font-weight: bold;
-    position: sticky;
-    float: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    line-height: 63px;
+    background:  rgba(0,0,0,0.4);
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+  }
+  
+footer ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+footer ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px blue;
+  }
+  
+footer ul li a:hover {
+    color: blue;
+    box-shadow: 0 0 5px blue;
+    text-shadow: 0 0 5px blue;
+  }
+footer ul li a img {
+    padding-top: 15px;
 }
