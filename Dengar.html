@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Intake & Matching</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root{
+  --primary:#4f6df5;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --danger:#dc2626;
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  max-width:720px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:32px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.hidden{display:none}
+
+h1,h2{margin-top:0}
+h1{font-size:28px}
+h2{font-size:22px}
+
+p{line-height:1.6;color:var(--muted)}
+
+button{
+  background:var(--primary);
+  color:white;
+  border:none;
+  border-radius:10px;
+  padding:14px 22px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button.secondary{
+  background:#e5e7ff;
+  color:var(--primary);
+}
+
+button.danger{
+  background:var(--danger);
+}
+
+button:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+input,textarea,select{
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  font-size:15px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+}
+
+textarea{min-height:120px}
+
+.options label{
+  display:block;
+  margin-top:10px;
+}
+
+.progress{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.psych-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.psych-card{
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:16px;
+}
+
+.psych-card strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.tag{
+  display:inline-block;
+  background:#eef2ff;
+  color:#4338ca;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:13px;
+  margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- LANDING -->
+<section id="landing" class="card">
+  <h1>Pahami kebutuhanmu sebelum bertemu psikolog</h1>
+  <p>
+    Ini bukan diagnosis dan bukan terapi.  
+    Ini alat bantu refleksi awal untuk membantumu memahami kondisi dan langkah yang relevan.
+  </p>
+  <br>
+  <button onclick="go('consent')">Mulai</button>
+</section>
+
+<!-- CONSENT -->
+<section id="consent" class="card hidden">
+  <h2>Sebelum melanjutkan</h2>
+  <p>Mohon pahami batasan berikut.</p>
+
+  <div class="options">
+    <label><input type="checkbox"> Ini bukan alat diagnosis</label>
+    <label><input type="checkbox"> Ini tidak menggantikan psikolog</label>
+    <label><input type="checkbox"> Ini hanya membantu pemahaman awal</label>
+    <label><input type="checkbox"> Jika saya darurat, saya akan mencari bantuan profesional</label>
+  </div>
+
+  <br>
+  <button id="consentBtn" disabled onclick="go('step1')">Saya Mengerti</button>
+</section>
+
+<!-- STEP 1 -->
+<section id="step1" class="card hidden">
+  <div class="progress">Langkah 1 / 7</div>
+  <h2>Apa yang paling mengganggu akhir-akhir ini?</h2>
+  <textarea id="issue" placeholder="Misalnya: sulit fokus, merasa tertekan, konflik dengan orang dekat"></textarea>
+  <br><br>
+  <button onclick="go('step2')">Lanjut</button>
+</section>
+
+<!-- STEP 2 -->
+<section id="step2" class="card hidden">
+  <div class="progress">Langkah 2 / 7</div>
+  <h2>Sudah sejak kapan?</h2>
+  <select id="duration">
+    <option>Beberapa hari</option>
+    <option>Beberapa minggu</option>
+    <option>Beberapa bulan</option>
+    <option>Lebih dari 6 bulan</option>
+  </select>
+  <br><br>
+  <button onclick="go('step3')">Lanjut</button>
+</section>
+
+<!-- STEP 3 -->
+<section id="step3" class="card hidden">
+  <div class="progress">Langkah 3 / 7</div>
+  <h2>Apa yang paling terdampak?</h2>
+  <div class="options">
+    <label><input type="checkbox"> Studi / Pekerjaan</label>
+    <label><input type="checkbox"> Relasi</label>
+    <label><input type="checkbox"> Emosi</label>
+    <label><input type="checkbox"> Kesehatan fisik</label>
+  </div>
+  <br>
+  <button onclick="go('step4')">Lanjut</button>
+</section>
+
+<!-- STEP 4 -->
+<section id="step4" class="card hidden">
+  <div class="progress">Langkah 4 / 7</div>
+  <h2>Apa tujuanmu mencari bantuan?</h2>
+  <select id="goal">
+    <option>Ingin dipahami</option>
+    <option>Ingin solusi / coping skill</option>
+    <option>Ingin eksplorasi diri</option>
+    <option>Belum tahu</option>
+  </select>
+  <br><br>
+  <button onclick="go('step5')">Lanjut</button>
+</section>
+
+<!-- STEP 5 -->
+<section id="step5" class="card hidden">
+  <div class="progress">Langkah 5 / 7</div>
+  <h2>Pendekatan yang terasa nyaman?</h2>
+  <select>
+    <option>Banyak mendengar & refleksi</option>
+    <option>Terstruktur & praktis</option>
+    <option>Mengalir</option>
+    <option>Belum tahu</option>
+  </select>
+  <br><br>
+  <button onclick="go('step6')">Lanjut</button>
+</section>
+
+<!-- STEP 6 -->
+<section id="step6" class="card hidden">
+  <div class="progress">Langkah 6 / 7</div>
+  <h2>Preferensi psikolog?</h2>
+  <select>
+    <option>Tidak ada</option>
+    <option>Preferensi gender</option>
+    <option>Gaya komunikasi tertentu</option>
+  </select>
+  <br><br>
+  <button onclick="go('step7')">Lanjut</button>
+</section>
+
+<!-- STEP 7 -->
+<section id="step7" class="card hidden">
+  <div class="progress">Langkah 7 / 7</div>
+  <h2>Apakah kamu merasa kondisi ini cukup mendesak?</h2>
+  <select id="urgent">
+    <option value="no">Tidak</option>
+    <option value="yes">Ya</option>
+  </select>
+  <br><br>
+  <button onclick="finish()">Lihat Ringkasan</button>
+</section>
+
+<!-- RESULT NORMAL -->
+<section id="result" class="card hidden">
+  <h2>Ringkasan Awal</h2>
+  <p id="summary"></p>
+  <p><strong>Catatan:</strong> Ini bukan diagnosis.</p>
+  <button class="secondary" onclick="go('landing')">Ulangi</button>
+</section>
+
+<!-- RESULT URGENT -->
+<section id="urgentResult" class="card hidden">
+  <h2>Kami menyarankan bantuan profesional</h2>
+  <p>
+    Dari jawabanmu, terlihat bahwa kondisi ini cukup mendesak dan akan lebih aman
+    jika kamu berbicara langsung dengan psikolog.
+  </p>
+
+  <h3>Psikolog yang tersedia</h3>
+
+  <div class="psych-list">
+    <div class="psych-card">
+      <strong>Psikolog A</strong>
+      Fokus: Kecemasan & stres  
+      <div class="tag">Available hari ini</div>
+    </div>
+
+    <div class="psych-card">
+      <strong>Psikolog B</strong>
+      Fokus: Relasi & emosi  
+      <div class="tag">Available besok</div>
+    </div>
+
+    <div class="psych-card">
+      <strong>Psikolog C</strong>
+      Fokus: Burnout & studi  
+      <div class="tag">Online</div>
+    </div>
+  </div>
+
+  <br>
+  <button class="danger">Hubungi Psikolog</button>
+</section>
+
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+
+// consent logic
+document.querySelectorAll("#consent input").forEach(cb=>{
+  cb.addEventListener("change",()=>{
+    const all=[...document.querySelectorAll("#consent input")].every(c=>c.checked);
+    document.getElementById("consentBtn").disabled=!all;
+  });
+});
+
+function finish(){
+  const urgent=document.getElementById("urgent").value;
+  const issue=document.getElementById("issue").value||"hal yang cukup membebani";
+  const duration=document.getElementById("duration").value;
+  const goal=document.getElementById("goal").value;
+
+  if(urgent==="yes"){
+    go("urgentResult");
+  }else{
+    document.getElementById("summary").innerText=
+      `Kamu sedang menghadapi ${issue} yang berlangsung selama ${duration}.
+      Tujuanmu mencari bantuan adalah: ${goal}.
+      Banyak orang dengan pola serupa merasa terbantu dengan refleksi terarah
+      atau berbicara dengan profesional.`;
+    go("result");
+  }
+}
+</script>
+</body>
+</html>
